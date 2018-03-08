@@ -1,0 +1,18 @@
+body
+{
+background: pink; 
+ height: 300px;
+ margin-left: 0px;
+ margin-right: 0px;
+ margin-top: 0px;
+ margin-bottom: 0px;
+}
+
+
+#contenido
+{
+    width: 800px;
+    margin: 0 auto;
+    background: paleturquoise;
+    height: 300px;
+}

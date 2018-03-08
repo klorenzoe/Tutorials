@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>History API</title>
+</head>
+<body>
+    <script>
+        
+    //window.history.back();
+    //window.history.forward();
+    //window.history.go(2); //received a complete parameter
+    //the parameter decide how forward or back
+    //console.log(window.history.length);
+    window.history.pushState(null, "","cambio pestaña"); //agrega un historial    //window.history.replaceState();
+    console.log(window.history.length); //modifica el historial
+    window.onpopstate = function(e){
+        console.log(e.state);
+    }
+    </script>
+</body>
+</html>

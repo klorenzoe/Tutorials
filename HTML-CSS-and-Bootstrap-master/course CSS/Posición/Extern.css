@@ -1,0 +1,18 @@
+#contenido
+{
+    width: 800px;
+    margin: 0 auto;
+    background: palegoldenrod;
+    height: 700px;
+    position: relative;
+}
+.prueba
+{
+    background: royalblue;
+    height: 100px;
+    width: 300px;
+    /*position: absolute;/*la posición es absoluta,no importa quien esté*/
+    top: 200px;
+    left:500px; /*También se puede trabajar con porcentajes*/
+    position: fixed;
+}

@@ -1,0 +1,9 @@
+body
+{
+    /*Para cambiarle el color:
+     background: mediumvioletred;
+    */
+   background-image:url(./flor.jpg);
+   background-repeat: no-repeat; /*para que solo la agregue una vez no en modo mosaico*/
+   background-repeat: repeat-x; /*para que solo se repita en el eje x*/
+}

@@ -1,0 +1,37 @@
+a{
+    color: darkcyan;
+}
+a:link{
+    color: blue;
+}
+a:visited{
+    /*Si un link ya fue visitado, cambia a este color*/
+    color:purple;
+}
+a:hover{
+    /*cuando el cursor pase sobre el componente este se opacará
+    con el color de abajo*/
+    background-color: gainsboro;
+}
+input:focus{
+    /*los input cambian de color cuando los oprimes*/
+    background: pink;
+    border-color: indigo;
+}
+ul li:first-child
+{
+    /*Aplica al primer elemento encontrado con esa característica*/
+    background: skyblue;
+}
+
+ul li:last-child
+{
+    /*Aplica al ultimo elemento encontrado con esa característica*/
+    background: yellow;
+}
+
+ul li:nth-child(2)
+{
+    /*Aplica al segundo elemento encontrado con esa característica*/
+    background: palevioletred;
+}

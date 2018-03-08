@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Classlist API</title>
+    <style>
+        div {
+            height: 200px;
+            width: 200px;
+            background-color: paleturquoise;
+            transition: all 0.4s;
+        }
+
+        .rojo {
+            background-color: rgb(200, 50, 50);
+            border-radius: 200px;
+        }
+
+        .pink {
+            height: 200px;
+            width: 200px;
+            background-color: pink;
+            transition: all 0.7s;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="elemento"></div>
+    <script>
+        window.addEventListener('load', init);
+        function init() {
+            var el = document.querySelector('#elemento');
+            el.onclick = function () {
+                if (!el.classList.contains('rojo')) {
+                    el.classList.add('rojo');
+                } else if (!el.classList.contains('pink')) {
+                    el.classList.add('pink');
+                }
+                else {
+                    el.classList.remove('rojo');
+                    el.classList.remove('pink');
+                }
+
+                //All the below code (if) can sustitude with
+                // el.classList.toggle('rojo');
+
+            }
+        }
+    </script>
+</body>
+
+</html>

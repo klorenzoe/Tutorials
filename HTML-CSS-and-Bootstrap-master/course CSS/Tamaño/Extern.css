@@ -1,0 +1,5 @@
+.tamaño{
+    height: 200px;/*Manipula la altura de los elementos*/
+    width: 50%;/*Cambia el ancho*/
+    border: solid;
+}

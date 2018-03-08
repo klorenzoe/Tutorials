@@ -1,0 +1,18 @@
+h1{
+  color: purple;
+  text-decoration: underline;  
+}
+p{
+    color: royalblue;
+}
+.apply{
+    color: peru;
+}
+#piePagina{
+    font-style: oblique;
+    color: black;
+}
+
+nav ul li{
+    color:maroon;
+}

@@ -1,0 +1,27 @@
+body
+{
+    font-family: Arial, Helvetica, sans-serif; 
+    /*Hay tres tipos de fuentes
+    porque estos son equivalentes en los diferentes sistemas operativos
+    windows, linux, OS*/
+
+}
+
+.parrafo-prueba
+{
+font-weight: bolder;
+font-size: 32px;
+}
+
+.parrafo-dos
+{
+    /*font-variant: small-caps; pasa todo a mayúscula*/
+    font-style: italic; /*Convierte esta letra a italica y a oblicuas*/
+}
+
+
+.parrafo-tres
+{
+    /*font-variant: small-caps; pasa todo a mayúscula*/
+    font-style: oblique; /*Un poco más inclinadas*/
+}

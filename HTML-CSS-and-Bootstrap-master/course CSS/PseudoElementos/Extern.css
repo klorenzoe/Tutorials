@@ -1,0 +1,27 @@
+ul li{
+    list-style-type: none;
+    font-size: 50px;
+    font-weight : bold;
+    color: pink;
+}
+ul li::before{
+    /*Va a colocar un elemento antes de cualquier li*/
+    content: url(corazon.png);
+}
+ul li::after{
+    /*Imagen despues del li*/
+    content:url(corazonPequenio.png);
+}
+
+p::first-letter
+{
+    /*la primera letra de esa etiqueta*/
+    font-size: 50px;
+    font-weight: bold;
+    color: orange;
+}
+.segundaLinea::first-line{
+    font-size: 36px;
+    color: palevioletred;
+text-decoration: unset;
+}

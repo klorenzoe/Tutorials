@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <canvas id="c" with='11000' height='11000'></canvas>
+    <script>
+        window.addEventListener('load', init);
+        function init(){
+            var canvas = document.getElementById('c');
+            var ctx = canvas.getContext('2d');
+            ctx.fillStyle = 'rgb(55,241,8)';
+            //strokeStyle
+            ctx.fillRect(0,0,200,200);
+            //ctx.strokeRect(0,0,200,200); //only the edges.
+            //ctx.clearRect(100,100,400,200); //clear the secction that I want
+            
+            //draw a circle
+            ctx.beginPath();
+            ctx.fillStyle = 'rgb(200,5,150)';
+            ctx.arc(150, 300,100,0,Math.PI*2);//x, y, radio, valor de inicio, valor final
+            ctx.fill();
+
+            //draw a triangle
+            ctx.strokeStyle = 'blue';
+            ctx.lineWidth = 10;
+            ctx.beginPath();
+            ctx.moveTo(100,100)
+            ctx.lineTo(200, 10)
+            ctx.lineTo(300, 100)
+            ctx.closePath();
+            ctx.stroke();
+            
+            //Text
+            ctx.font = "18pt calibri"
+            ctx.fillText('Triangulo',100,100);//cadena, x, y
+        }
+    </script>
+</body>
+</html>

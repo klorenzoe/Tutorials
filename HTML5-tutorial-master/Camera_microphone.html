@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Get user media API</title>
+</head>
+<body>
+    <video id="video"></video>
+    <script>window.addEventListener('load',init);
+    function init(){
+        var video = document.getElementById('video');
+        navigator.getUserMedia = (
+            navigator.getUserMedia ||
+            navigator.webkitGetUserMedia ||
+            navigator.mozGetUserMedia ||
+            navigator.msGetUserMedia
+        );
+        if(navigator.getUserMedia){
+            navigator.getUserMedia({/*constraints*/video: true, audio: true}, function(stream){/*success function*/
+                video.scr = window.URL.createObjectURL(stream);
+                video.play();
+            }, 
+            function(e){
+                /*Error function*/
+                console.log(e);
+                });
+        }else{
+            alert("Tu navegador no soporta este sitio");
+        }
+    }
+        
+    </script>
+</body>
+</html>

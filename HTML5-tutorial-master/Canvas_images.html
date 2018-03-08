@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Get user media API</title>
+    <style>
+    #c{
+        border:solid;
+    }
+    #video{
+        display: all;
+    }
+    </style>
+</head>
+<body>
+    <video id="video"></video>
+    <canvas id = "c"></canvas>
+    <button id='take'>toma foto</button>
+    <img id='foto' alt='mi foto'>
+   <script>
+   var ctx, canvas;
+   var x=0, y=0, v_x=10, v_y=10;
+   window.addEventListener('load',init);
+    window.requestAnimationFrame = (function(){
+        return window.requestAnimationFrame ||
+        window.webkitRequestAnimationFrame ||
+        window.mozRequestAnimationFrame ||
+        function(f){
+            window.setTimeout(f,1000/60);
+        }
+    })();
+    function init(){
+        var video = document.getElementById('video');
+        var boton = document.getElementById('take');
+        boton.addEventListener('click', tomarFoto);
+        navigator.getUserMedia = (
+            navigator.getUserMedia ||
+            navigator.webkitGetUserMedia ||
+            navigator.mozGetUserMedia ||
+            navigator.msGetUserMedia
+        );
+        if(navigator.getUserMedia){
+            navigator.getUserMedia({/*constraints*/video: true}, function(stream){/*success function*/
+                video.scr = window.URL.createObjectURL(stream);
+                video.play();
+            }, 
+            function(e){
+                /*Error function*/
+                console.log(e);
+                });
+        }else{
+            alert("Tu navegador no soporta este sitio");
+        }
+        canvas = document.getElementById('c');
+        ctx = canvas.getContext('2d');
+        video.addEventListener('loadedmetadata',function(){
+            canvas.width = video.videoWidth;
+            canvas.height = video.videoHeight;
+            flag=true
+            draw();
+        }, false);
+    }
+    function draw(){
+     /*   var imagen = new Image();
+        imagen.src = "ruta_imagen.png"
+        imagen.onload = function(){
+            ctx.drawImage(this,0,0, 800, 600); x,y, width, height
+        }*/
+        ctx.drawImage(video, 0,0);
+        requestAnimationFrame(draw);
+    }
+    function tomarFoto(){
+if(!flag){
+    alert('no puede tomar fotos por ahora');
+    return;
+}
+    }
+ var imgData = canvas.toDataURL('image/png');
+ document.getElementById('foto').setAttribute('src', ImgeData);   
+
+    </script>
+</body>
+</html>

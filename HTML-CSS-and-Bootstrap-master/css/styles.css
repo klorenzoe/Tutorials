@@ -1,0 +1,26 @@
+h1 {
+    color:#2E112D
+}
+body{
+    background:#F07D37
+}
+
+h5{
+    margin-block-start: 100;
+    /* margin-block-end: 100; */
+    color:#820333
+}
+
+p{
+    color:#FFFFFF
+}
+
+.purple{
+    
+   background:#540032
+}
+
+.pink{
+    padding: 10;
+    background: #C9283E
+}

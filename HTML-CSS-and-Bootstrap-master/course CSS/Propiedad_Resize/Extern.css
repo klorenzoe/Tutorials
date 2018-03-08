@@ -1,0 +1,8 @@
+.tamaño
+{
+    height: 30px;
+    width: 30px;
+    overflow: hidden;
+    border: solid;
+    resize: both;/*Permite al usuario cambiar el tamaño del  div*/
+}

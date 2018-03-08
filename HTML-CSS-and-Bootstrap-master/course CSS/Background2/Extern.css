@@ -1,0 +1,7 @@
+body
+{
+    background-image: url(corazon.png), url(textura.png);
+    background-repeat: repeat, repeat;
+    /*background-position: center, left top;*/
+   /* background-size: 100% 100% /*Ancho y altura*/
+}

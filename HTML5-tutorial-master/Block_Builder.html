@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>BLOB</title>
+</head>
+
+<body>
+    <label>
+        Selecciona un archivo:
+    </label>
+    <input type='file' id='archivo'>
+    <script>
+        window.addEventListener('load', init, false);
+        function init() {
+            var inptFile = document.getElementById('archivo');
+            inptFile.addEventListener('change', createBlob, false);
+        }
+
+        function createBlob(e) {
+            var archivos = e.target.files;
+            for (var i = 0; i < archivos.lenght; i++) {
+                var archivo = archivos[i];
+                var fR = new FileReader();
+                fR.addEventListener('load', function () {
+                    mostrar(event, archivo);
+                }, false);
+                var blob = archivo.slice(0, 1000);
+                fR.readAsBinaryString(blob);
+            }
+        }
+        function mostrar(e, archivo) {
+            console.log(e);
+            console.log(archivo);
+        }
+    </script>
+</body>
+
+</html>

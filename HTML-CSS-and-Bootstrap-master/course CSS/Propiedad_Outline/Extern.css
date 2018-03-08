@@ -1,0 +1,6 @@
+#miForm input
+{
+    outline: dashed; /*hace referencia al marco del componetne*/
+    outline-color: maroon;
+    outline-width: 2px;
+}
