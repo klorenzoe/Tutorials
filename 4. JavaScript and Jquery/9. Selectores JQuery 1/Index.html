@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script type="text/javascript" src="code.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <title>Document</title>
+    <script>
+        $(function () {
+            $('div.miDiv ').css({
+                'background': '#05DFCF'
+            });
+
+            $('div.miDiv article p').text("este es un selector específico");
+        });
+
+    </script>
+
+</head>
+
+<body>
+    <div class='miDiv'>
+        <article>
+            <p>Jquery !</p>
+        </article>
+    </div>
+
+    <div>
+        <article>
+            <p>Este es un tutorial</p>
+        </article>
+    </div>
+</body>
+
+</html>
